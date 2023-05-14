@@ -1,6 +1,6 @@
 
 # Phase 3 Project Description
-![house](https://github.com/Julez89/)
+![churn](https://github.com/Julez89/dsc-phase-3-project-v2-3/blob/main/images/churn.png)
 
 ## Project Overview
 
@@ -34,7 +34,7 @@ This project uses a customer churn data set. The data did not include any missin
 * Number of voice mail messages
 
 Regarding my target variable (churn), we are dealing with class imbalance. 85% of the data set contain information about staying customers and only 15% churn. 
-![target](https://github.com/Julez89/)
+![target](https://github.com/Julez89/dsc-phase-3-project-v2-3/blob/main/images/target_var.png)
 
 ### Approach
 
@@ -59,13 +59,13 @@ To follow an iterative approach, I am starting with a very simple, vanilla logis
 As next model, I am trying a Random Forest model with the standard hyperparameters. This model already improved a lot (F1=0.82). Also the accuracy improved a lot even though the accuracy of 1 for training is a bit suspicious. The accuracy of test data is 0.94 so it's only slightly overfitting and overall performing quite well. The adjustment of hyperparameters for my random forest model did not improve the model.
 Next, I am trying an ensemble method with bagging and XGB Classifier. The main difference between BaggingClassifier and XGBClassifier is in their approach to ensemble learning. BaggingClassifier creates multiple samples of the training data and trains base classifiers on each sample, while XGBClassifier uses gradient boosting to iteratively improve the prediction accuracy.
 The bagging classifier showed worse metrics than the random forest model. The XGBClassifier worked fairly well. It had a high precision (0.91) but a bit lower recall (0.78). Since I want to balance both errors, I tried different strategies to come to a better balance. First, I tried different hyperparameters, then I tried using a lower threshold (0.3 instead of default 0.5). Finally, I tried a different sampling method than Smote that worked better. It was a combination of oversampling and undersampling. I applied my slightly tuned XGBClassifier model without adjusting the threshold.
-![model](https://github.com/Julez89/)
+![model](https://github.com/Julez89/dsc-phase-3-project-v2-3/blob/main/images/models.png)
 
 ## Evaluation
 
 My final model is a XGB Classifier with slightly tuned hyperparameters but default threshold. (learning_rate=0.1, max_depth=5, n_estimators=300) after addressing class imbalance with oversampling and undersampling instead of SMOTE. 
 The combination of oversampling of the minority and undersampling of majority has lead to better results than the approach with SMOTE. The XGB Classifier model has performed well in predicting customer churn. The precision score for class 1 (churn) is 0.88, which means that when the model predicts a customer will churn, it is correct 88% of the time. The recall score for class 1 is 0.83, which means that the model correctly identifies 83% of all customers who actually churn. The F1-score for class 1 is 0.85, which is a harmonic mean of precision and recall and indicates overall performance of the model for class 1. Additionally, the macro-average F1-score is 0.91, which means that the model performs well in both classes. The accuracy of the model on the test set is 0.9565, which means that the model correctly predicts 95.65% of all customers' churn status. The high accuracy on the training set (1.0) and a comparable accuracy on the test set (0.9565) suggests that the model has not overfit the training data. 
-![features](https://github.com/Julez89/)
+![features](https://github.com/Julez89/dsc-phase-3-project-v2-3/blob/main/images/features.png)
 Based on the feature importance chart, the three most important features for predicting customer churn are international_plan, voice_mail_plan, and customer_service_calls. This suggests that customers who have an international plan are more likely to churn, as are those with a voice mail plan. In addition, customers who have made a larger number of customer service calls are also more likely to churn.
 
 ## Summary & Recommendation
