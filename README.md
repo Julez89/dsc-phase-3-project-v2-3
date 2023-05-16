@@ -80,8 +80,8 @@ With the model, I have identified several factors that are important in determin
 We would have to monitor the performance of the model when we introduce more data to see if it's overfitting with more data or not. 
 
 ## This repository
-My technical code is stored in this [jupyter notebook](https://github.com/Julez89/dsc-phase-2-project-v2-5/blob/main/Deliverables/notebook.pdf)
+My technical code is stored in this [jupyter notebook](https://github.com/Julez89/dsc-phase-3-project-v2-3/blob/main/Deliverables/notebook.pdf)
 
-My presentation can be found [here](https://github.com/Julez89/dsc-phase-2-project-v2-5/blob/main/Deliverables/presentation.pdf)
+My presentation can be found [here](https://github.com/Julez89/dsc-phase-3-project-v2-3/blob/main/Deliverables/presentation.pdf)
 
-My github repository is [here](https://github.com/Julez89/dsc-phase-2-project-v2-5/blob/main/Deliverables/github.pdf)
+My github repository is [here](https://github.com/Julez89/dsc-phase-3-project-v2-3/blob/main/Deliverables/github.pdf)
